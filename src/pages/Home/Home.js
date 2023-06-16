@@ -1,15 +1,14 @@
-import React from 'react';
-import Child from '../Child';
-import Parent from '../Parent';
+// import React from 'react';
 
-const Home = () => {
-    return (
-        <div>
-             <Parent />
-            
+// import Parent from '../Parent';
+
+// const Home = () => {
+//     return (
+//         <div>
+//              <Parent />          
            
-        </div>
-    );
-};
+//         </div>
+//     );
+// };
 
-export default Home;
+// export default Home;
