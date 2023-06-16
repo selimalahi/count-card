@@ -1,22 +1,33 @@
-// import { RouterProvider } from 'react-router-dom';
-import { useState } from 'react';
+
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
+import Main from './pages/Layout/Main';
+import Home from './pages/Home/Home';
+
 
 function App() {
-
-  const [count, setcount] = useState(0);
+     const router = createBrowserRouter([
+    
+      {
+        path: '/',
+        element: <Main></Main>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>
+            }
+            
+        ]
+       
+      
+    },
+ 
+      
+     ])
+  
   return (
     <div className="App ">
-       <div className='card'>
-        <h1 className='...'>{count}</h1>
-        <div className='...'>
-          <button onClick={() => setcount(count-1)}>Decrement</button>
-          <button
-           onClick={ () => setcount(( prvState) => prvState +1)}
-          >inrement</button>
-        </div>
-
-       </div>
+       <RouterProvider router ={router} />
     </div>
   );
 }

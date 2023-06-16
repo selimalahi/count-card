@@ -1,12 +1,13 @@
-import React from "react";
-import '../App.css'
+import React, { useState } from "react";
+import '../App.css';
+import Child from "./Child";
 
-const Child = ( {count, setCount}) => {
-    
+const Parent = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
       <div className="card">
-        <h1>child</h1>
+        <h1>parentf</h1>
         <h1 className="...">{count}</h1>
         <div className="...">
           <button onClick={() => setCount(count - 1)}>Decrement</button>
@@ -14,9 +15,11 @@ const Child = ( {count, setCount}) => {
             inrement
           </button>
         </div>
+        
       </div>
+      <Child count={count} setCount={setCount} />
     </div>
   );
 };
 
-export default Child;
+export default Parent;
