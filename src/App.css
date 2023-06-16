@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  margin-top: 250px;
+  
+}
+.card{
+  border: 3px solid #000;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding-bottom: 10px;
 }
 
 .App-logo {
