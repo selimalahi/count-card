@@ -33,21 +33,38 @@
 
 // export default App;
 
-import { createContext, useState } from "react";
+// import { createContext, useState } from "react";
+// import "./App.css";
+// import Parent from "./pages/Parent";
+
+// export const COUNTER_CONTEXT = createContext();
+// function App() {
+//   const [count, setCount] = useState(0);
+//   const value = { count, setCount };
+
+//   return (
+//     <COUNTER_CONTEXT.Provider value={value}>
+//       <div className="App ">
+//         <Parent />
+//       </div>
+//     </COUNTER_CONTEXT.Provider>
+//   );
+// }
+
+// export default App;
+
+
 import "./App.css";
-import Parent from "./pages/Parent";
-
-export const COUNTER_CONTEXT = createContext();
+// import UseFrom from "./pages/UseFrom";
+import Counter from './pages/Counter'
 function App() {
-  const [count, setCount] = useState(0);
-  const value = { count, setCount };
-
-  return (
-    <COUNTER_CONTEXT.Provider value={value}>
+  
+  return (    
       <div className="App ">
-        <Parent />
+        {/* <UseFrom /> */}
+        <Counter />
       </div>
-    </COUNTER_CONTEXT.Provider>
+    
   );
 }
 
